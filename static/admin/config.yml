@@ -1,0 +1,38 @@
+backend:
+  name: github
+  repo: timswalling/netlify-cms-test
+
+media_folder: static/assets
+publish_mode: editorial_workflow
+
+collections:
+  - name: blog
+    label: Blog
+    folder: blog
+    create: true
+    fields:
+      - label: Path
+        name: path
+      - label: Date
+        name: date
+        widget: date
+      - label: Title
+        name: title
+      - label: Body
+        name: body
+        widget: markdown
+      - label: Features
+        name: features
+        widget: list
+        fields:
+          - label: Description
+            name: description
+            required: false
+            widget: markdown
+          - label: image
+            name: image
+            widget: image
+          - label: thumbnail
+            name: thumbnail
+            required: false
+            widget: image
